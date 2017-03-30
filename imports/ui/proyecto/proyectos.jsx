@@ -3,6 +3,7 @@ import Proyecto from './proyecto';
 import {chunk} from 'lodash'
 import AdvSearch from './search'
 import {  Button } from 'react-bootstrap';
+import Equalizer from 'react-equalizer';
 
 
 class Proyectos extends Component{
@@ -44,7 +45,9 @@ class Proyectos extends Component{
           {this.organize().map((grupo,index)=>{
               return(
                 <div className="row">
+                  <Equalizer>
                   {grupo}
+                  </Equalizer>
                 </div>
               )
 
