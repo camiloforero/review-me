@@ -85,6 +85,7 @@ class App extends Component {
       var body = response.data;
       var owner = body.owner;
       project.id = body.id;
+      project['_id'] = body.id;
       project.name = body.name;
       project.owner = owner.login;
       project.summary = body.description;
@@ -110,7 +111,7 @@ class App extends Component {
       console.log(project);
       Meteor.call('projects.insert', project);
     }).catch(function (error) {
-      console.log("que putitas");
+      console.log("Error insertando el nuevo proyecto en imports/ui/App.jsx");
       console.log(error);
     });
   }
