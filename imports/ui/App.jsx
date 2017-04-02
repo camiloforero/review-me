@@ -7,7 +7,6 @@ import axios from 'axios';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Projects } from '../api/projects.js';
 
-
 class App extends Component {
 
   constructor(props) {
